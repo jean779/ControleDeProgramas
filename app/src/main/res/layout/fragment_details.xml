@@ -66,62 +66,81 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/synopsisdetails"
-            android:layout_width="263dp"
-            android:layout_height="45dp"
+            android:layout_width="304dp"
+            android:layout_height="123dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="92dp"
             android:layout_marginEnd="24dp"
             android:text="TextView"
-            android:textColor="#FFFEFE"
+            android:textSize="12dp"
+            android:textColor="#c16ca8"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/broadcasterdetails" />
+            app:layout_constraintTop_toTopOf="@+id/hostdetails" />
 
         <TextView
             android:id="@+id/broadcasterdetails"
-            android:layout_width="263dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:layout_width="85dp"
+            android:layout_height="27dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/shojumaru"
             android:text="TextView"
-            android:textColor="#FFFEFE"
+            android:textColor="#D98C4A"
+            app:layout_constraintBottom_toBottomOf="@+id/nameDetails"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hostdetails" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/nameDetails"
+            app:layout_constraintTop_toTopOf="@+id/nameDetails" />
 
         <TextView
             android:id="@+id/hostdetails"
-            android:layout_width="263dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="162dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto_thin"
             android:text="TextView"
-            android:textColor="#FFFEFE"
+            android:textColor="#9AC6C5"
+            android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.025"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameDetails" />
 
         <TextView
             android:id="@+id/nameDetails"
-            android:layout_width="263dp"
-            android:layout_height="45dp"
+            android:layout_width="215dp"
+            android:layout_height="33dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto_bold_italic"
             android:text="TextView"
             android:textColor="#FFFEFE"
+            android:textSize="24dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="415dp"
+            android:layout_height="4.5dp"
+            android:layout_marginTop="44dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hostdetails" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButtonedit"
@@ -129,13 +148,13 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="44dp"
             android:layout_marginBottom="64dp"
+            android:backgroundTint="@color/botao"
             android:clickable="true"
             android:focusable="true"
-            android:backgroundTint="@color/botao"
             android:src="@drawable/ic_edit"
-            app:tint="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@android:color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
