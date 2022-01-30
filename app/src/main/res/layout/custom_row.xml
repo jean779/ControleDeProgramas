@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:paddingBottom="0dp"
+    android:id="@+id/rowLayout"
+    android:paddingTop="35dp"
+    android:paddingHorizontal="24dp"
+    android:background="#2C2F33"
+    >
+
+
+    <TextView
+        android:id="@+id/programnametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:text="BigBrother"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/broadcastertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/roboto_light_italic"
+        android:text="Globo"
+
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/programnametxt"
+        app:layout_constraintTop_toBottomOf="@+id/programnametxt" />
+
+    <TextView
+        android:id="@+id/agegrouptxt"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/agerectangle"
+        android:gravity="center"
+        android:text="16"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/broadcastertxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/programnametxt" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="415dp"
+        android:layout_height="4.5dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

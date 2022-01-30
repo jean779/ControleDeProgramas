@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinzadisc"
+    android:padding="24dp"
+    tools:context=".fragments.update.UpdateFragment">
+
+    <EditText
+        android:id="@+id/synopsisEdit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Synopsis"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/programnameEdit" />
+
+    <EditText
+        android:id="@+id/programnameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Tv Show Name"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hostnameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Host Name "
+        android:fontFamily="@font/roboto_bold_italic"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageGroupEdit" />
+
+    <EditText
+        android:id="@+id/ageGroupEdit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Age Group"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/synopsisEdit" />
+
+    <EditText
+        android:id="@+id/timeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Time"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hostnameEdit" />
+
+    <EditText
+        android:id="@+id/broadcasterEdit"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="broadcaster"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeEdit" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/botao"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:text="EDIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/broadcasterEdit" />
+
+    <Button
+        android:id="@+id/btnDeleteEdit"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/botao"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:text="DELETE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEdit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

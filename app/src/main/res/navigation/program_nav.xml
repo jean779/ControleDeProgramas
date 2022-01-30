@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/program_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.controlesprogramasdetv.fragments.list.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.controlesprogramasdetv.fragments.add.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.controlesprogramasdetv.fragments.update.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment2"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.controlesprogramasdetv.fragments.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+</navigation>
