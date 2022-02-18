@@ -1,102 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/cinzadisc"
-    android:padding="24dp"
-    tools:context=".fragments.add.AddFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <EditText
-        android:id="@+id/addSynopsis"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Synopsis"
-        android:fontFamily="@font/roboto_bold_italic"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addProgramname" />
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.controlesprogramasdetv.ui.fragments.add.AddModelView" />
+    </data>
 
-    <EditText
-        android:id="@+id/addProgramname"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="Tv Show Name"
-        android:fontFamily="@font/roboto_bold_italic"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="@color/cinzadisc"
+        android:padding="24dp"
+        tools:context=".ui.fragments.add.AddFragment">
 
-    <EditText
-        android:id="@+id/addhostname"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Host Name "
-        android:fontFamily="@font/roboto_bold_italic"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addageGroup" />
+        <EditText
+            android:id="@+id/addSynopsis"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Synopsis"
+            android:text="@={viewmodel.programaTv.synopsis}"
+            android:fontFamily="@font/roboto_bold_italic"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProgramname" />
 
-    <EditText
-        android:id="@+id/addageGroup"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Age Group"
-        android:fontFamily="@font/roboto_bold_italic"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addSynopsis" />
+        <EditText
+            android:id="@+id/addProgramname"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Tv Show Name"
+            android:text="@={viewmodel.programaTv.nameProgram}"
+            android:fontFamily="@font/roboto_bold_italic"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/addTime"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Time"
-        android:fontFamily="@font/roboto_bold_italic"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addhostname" />
+        <EditText
+            android:id="@+id/addhostname"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Host Name "
+            android:text="@={viewmodel.programaTv.host}"
+            android:fontFamily="@font/roboto_bold_italic"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addageGroup" />
 
-    <EditText
-        android:id="@+id/addbroadcaster"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="broadcaster"
-        android:fontFamily="@font/roboto_bold_italic"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTime" />
+        <EditText
+            android:id="@+id/addageGroup"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Age Group"
+            android:text="@={viewmodel.programaTv.ageGroup+``}"
+            android:fontFamily="@font/roboto_bold_italic"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addSynopsis" />
 
-    <Button
-        android:id="@+id/add_btn"
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:layout_marginTop="16dp"
-        android:text="Add"
-        android:backgroundTint="@color/botao"
-        android:fontFamily="@font/roboto_bold_italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addbroadcaster" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/addTime"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Time"
+            android:text="@={viewmodel.programaTv.time}"
+            android:fontFamily="@font/roboto_bold_italic"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addhostname" />
+
+        <EditText
+            android:id="@+id/addbroadcaster"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="broadcaster"
+            android:text="@={viewmodel.programaTv.broadcaster}"
+            android:fontFamily="@font/roboto_bold_italic"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addTime" />
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:text="Add"
+            android:backgroundTint="@color/botao"
+            android:onClick="@{() -> viewmodel.onInsertProgramTvStart()}"
+            android:fontFamily="@font/roboto_bold_italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addbroadcaster" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

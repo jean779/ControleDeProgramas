@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#23272A"
     android:padding="24dp"
-    tools:context=".AboutFragment">
+    tools:context=".ui.fragments.about.AboutFragment">
 
 
     <ImageView
